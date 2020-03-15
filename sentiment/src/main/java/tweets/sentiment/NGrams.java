@@ -16,7 +16,10 @@ public class NGrams {
 	public void setnGramsFreq(ArrayList<String> tweets) {
 		Report report = new Report();
 		HashMap<String, Integer> grams = new HashMap<String, Integer>();
-
+		grams1Freq = new HashMap<String, Integer>();
+		grams2Freq = new HashMap<String, Integer>();
+		grams3Freq = new HashMap<String, Integer>();
+		grams4Freq = new HashMap<String, Integer>();
 		for(String tweet: tweets) {
 			Collection<String> nGrams = new ArrayList<String>();
 			for(int i=1; i<=4; i++) {

@@ -1,5 +1,7 @@
 package tweets.sentiment;
 
+import java.io.FileWriter;
+import java.io.IOException;
 import java.util.HashMap;
 import java.util.Map.Entry;
 
@@ -14,6 +16,18 @@ public class Report {
 	private HashMap<String, Integer> freqentadjectiveNoun = new HashMap<String, Integer>();
 	private HashMap<String, Integer> freqentadverbVerb = new HashMap<String, Integer>();
 	private HashMap<String, Integer> freqentprepositionPronoun = new HashMap<String, Integer>();
+	private HashMap<String, Integer> freqentSubjectVerbObject = new HashMap<String, Integer>();
+	private HashMap<String, Integer> freqentNER = new HashMap<String, Integer>();
+	
+	private FileWriter fstream;
+	
+	public Report() {
+		
+	}
+	
+	public Report(FileWriter fstream) {
+		this.fstream = fstream;
+	}
 	
 	public HashMap<String, Integer> getTopTwenty(HashMap<String, Integer> allContents, int n) {
 		HashMap<String, Integer> topTwenty = new HashMap<String, Integer>();
@@ -131,12 +145,34 @@ public class Report {
 	public void setFreqentPrepositionPronoun(HashMap<String, Integer> freqentprepositionPronoun) {
 		this.freqentprepositionPronoun = this.getTopTwenty(freqentprepositionPronoun,10);
 	}
+	
+	public HashMap<String, Integer> getFreqentSubjectVerbObject(HashMap<String, Integer> freqentSubjectVerbObject) {
+		setFreqentSubjectVerbObject(freqentSubjectVerbObject);
+		return this.freqentSubjectVerbObject;
+	}
 
-	public void reportFrequencies(String context, HashMap<String, Integer> freqencyMap) {
+	public void setFreqentSubjectVerbObject(HashMap<String, Integer> freqentSubjectVerbObject) {
+		this.freqentSubjectVerbObject = this.getTopTwenty(freqentSubjectVerbObject,10);
+	}
+	
+	public HashMap<String, Integer> getFreqentNER(HashMap<String, Integer> freqentNER) {
+		setFreqentNER(freqentNER);
+		return this.freqentNER;
+	}
+
+	public void setFreqentNER(HashMap<String, Integer> freqentNER) {
+		this.freqentNER = this.getTopTwenty(freqentNER,10);
+	}
+
+
+	public void reportFrequencies(String context, HashMap<String, Integer> freqencyMap) throws IOException {
 	  System.out.println("Most frequent " + context + ":-");
+	  fstream.write("\n" + "Most frequent " + context + ":-\n");
       for(String key: freqencyMap.keySet()) {
-      	System.out.println(key + " " + freqencyMap.get(key));
+      	System.out.println(key + " " + ": " + freqencyMap.get(key));
+      	fstream.write("\n" + key + " " + ": " + freqencyMap.get(key));
       }
       System.out.println();
+      fstream.write("\n");
 	}
 }

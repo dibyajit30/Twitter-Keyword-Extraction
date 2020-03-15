@@ -1,0 +1,226 @@
+
+Most frequent Hashtag:-
+
+#Sci-Five? : 1
+#24 : 1
+#gayforpeavy : 1
+#iphone : 1
+#2: : 1
+#1: : 1
+#bludget : 1
+#TTSC? : 1
+#itm : 1
+#...We : 1
+#wv09 : 1
+#gmail? : 1
+#STAtravel : 1
+#spotify : 1
+#3 : 1
+#Heroes : 1
+#AdTech : 1
+#B09 : 1
+#publicwhip : 1
+#fb : 2
+
+Most frequent @Mention:-
+
+@David_Henrie : 3
+@Schofe : 4
+@SarahSaner : 2
+@Steve_Buscemi : 4
+@nick_carter : 4
+@dougiemcfly : 8
+@SaphInfection : 2
+@DonnieWahlberg : 4
+@sian_the_mouse : 3
+@mileycyrus : 7
+@rustyrockets : 3
+@JonathanRKnight : 10
+@heidimontag : 7
+@jemcam : 2
+@nicolerichie : 4
+@ddlovato : 5
+@MinaMeow : 2
+@mpesce : 2
+@stephenkruiser : 11
+@plutobob : 2
+
+Most frequent 1Grams:-
+
+but : 165
+a : 470
+im : 232
+in : 279
+for : 308
+i : 952
+is : 324
+it : 315
+my : 407
+the : 644
+that : 203
+at : 146
+and : 397
+of : 222
+me : 201
+have : 177
+to : 722
+so : 187
+you : 360
+on : 180
+
+Most frequent 2Grams:-
+
+i just : 27
+i was : 42
+i cant : 34
+for the : 43
+i think : 28
+have to : 42
+and i : 34
+i love : 33
+have a : 34
+to the : 30
+i am : 36
+going to : 55
+i dont : 50
+on the : 36
+to go : 30
+in the : 63
+to be : 34
+at the : 28
+i have : 64
+of the : 32
+
+Most frequent 3Grams:-
+
+i dont like : 6
+going to be : 8
+looking forward to : 7
+is going to : 11
+i have a : 9
+going to bed : 9
+to hear that : 7
+sorry to hear : 11
+i dont know : 7
+i miss my : 6
+i have to : 22
+dont want to : 9
+i want to : 8
+cant wait to : 7
+i need to : 14
+in the world : 7
+i feel like : 8
+i wish i : 7
+to go to : 11
+i dont want : 10
+
+Most frequent 4Grams:-
+
+sorry to hear about : 6
+bday xp haa xd : 4
+that some celebrities wish : 4
+bday yay i wish : 4
+me happy bday xp : 4
+got bday yay i : 4
+celebrities wish me happy : 4
+wish me happy bday : 4
+so sorry to hear : 5
+xp haa xd itll : 4
+sorry to hear that : 5
+cant wait to see : 4
+i wish that some : 4
+wish that some celebrities : 4
+ive got bday yay : 4
+happy bday xp haa : 4
+haa xd itll never : 4
+to hear about your : 5
+i dont want to : 8
+xd itll never happen : 4
+
+Most frequent Nouns:-
+
+love : 68
+im : 232
+need : 45
+work : 80
+night : 63
+tomorrow : 51
+lol : 50
+cant : 81
+hope : 47
+morning : 55
+home : 43
+sleep : 61
+thanks : 49
+twitter : 46
+u : 57
+today : 69
+ive : 42
+time : 89
+day : 96
+dont : 90
+
+Most frequent Adjective-Noun:-
+
+last night : 9
+good night : 15
+great day : 5
+good morning : 15
+happy bday : 4
+nice day : 6
+new job : 4
+good luck : 10
+good day : 7
+same time : 4
+
+Most frequent Adverb-Verb:-
+
+so tired : 6
+just had : 4
+just fell : 4
+just found : 6
+so excited : 6
+ill be : 9
+not going : 4
+never happen : 4
+just got : 13
+just finished : 5
+
+Most frequent Preposition-Pronoun:-
+
+for me : 22
+of you : 8
+with my : 15
+on my : 18
+with you : 7
+for you : 14
+if you : 14
+in my : 17
+for my : 15
+of my : 22
+
+Most frequent Adverb-Verb in positive tweets:-
+
+never seen : 2
+just had : 4
+so tired : 2
+just found : 4
+there is : 3
+so excited : 5
+ill be : 6
+never happen : 4
+just got : 4
+just finished : 3
+
+Most frequent Adverb-Verb in negative tweets:-
+
+so tired : 4
+just fell : 4
+still waiting : 2
+just realized : 2
+already gone : 2
+ill be : 3
+not going : 3
+still have : 2
+just want : 2
+just got : 9

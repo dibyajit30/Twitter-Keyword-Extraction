@@ -9,6 +9,8 @@ import com.opencsv.CSVReader;
 
 public class ReadCSV {
 	private ArrayList<String> tweets = new ArrayList<String>();
+	private ArrayList<String> positiveTweets = new ArrayList<String>();
+	private ArrayList<String> negativeTweets = new ArrayList<String>();
 	private HashMap<String, Integer> hashtagFreq = new HashMap<String, Integer>();
 	private HashMap<String, Integer> atMentionFreq = new HashMap<String, Integer>();
 	
@@ -40,7 +42,7 @@ public class ReadCSV {
 
 	public	ReadCSV(String file) throws IOException {
 		FileReader filereader = new FileReader(file); 
-		CSVReader csvReader = new CSVReader(filereader); 
+		CSVReader csvReader = new CSVReader(filereader);
         String[] nextRecord; 
   
         while ((nextRecord = csvReader.readNext()) != null) { 
@@ -57,6 +59,12 @@ public class ReadCSV {
         	}
         	tweet = extractContents.extractUsefulWords(tweet);
         	tweets.add(tweet);
+        	if(nextRecord[0].equals("4")) {
+        		positiveTweets.add(tweet);
+        	}
+        	else {
+        		negativeTweets.add(tweet);
+        	}
         }
         
         csvReader.close();
@@ -65,4 +73,13 @@ public class ReadCSV {
 	public ArrayList<String> getTweets() throws IOException{
 		return this.tweets;
 	}
+	
+	public ArrayList<String> getPositiveTweets() {
+		return this.positiveTweets;
+	}
+
+	public ArrayList<String> getNegativeTweets() {
+		return this.negativeTweets;
+	}
+
 }
