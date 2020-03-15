@@ -21,12 +21,8 @@ public class ReadCSV {
 	}
 	
 	public void addHashtagFreq(String hashtag) {
-		if(this.hashtagFreq.containsKey(hashtag)) {
-			this.hashtagFreq.put(hashtag, this.hashtagFreq.get(hashtag) + 1);
-		}
-		else {
-			this.hashtagFreq.put(hashtag, 1);
-		}
+		Report report = new Report();
+		this.hashtagFreq = report.addFrequecy(this.hashtagFreq, hashtag);
 	}
 
 	public HashMap<String, Integer> getAtMentionFreq() {
@@ -38,12 +34,8 @@ public class ReadCSV {
 	}
 	
 	public void addAtMentionFreq(String atMention) {
-		if(this.atMentionFreq.containsKey(atMention)) {
-			this.atMentionFreq.put(atMention, this.atMentionFreq.get(atMention) + 1);
-		}
-		else {
-			this.atMentionFreq.put(atMention, 1);
-		}
+		Report report = new Report();
+		this.atMentionFreq = report.addFrequecy(this.atMentionFreq, atMention);
 	}
 
 	public	ReadCSV(String file) throws IOException {
@@ -52,17 +44,19 @@ public class ReadCSV {
         String[] nextRecord; 
   
         while ((nextRecord = csvReader.readNext()) != null) { 
-        	tweets.add(nextRecord[5]);
+        	String tweet = nextRecord[5];
         	ArrayList<String> contents = new ArrayList<String>(); 
         	ExtractTweetContents extractContents = new ExtractTweetContents();
-        	contents = extractContents.extractHashtags(nextRecord[5]);
+        	contents = extractContents.extractHashtags(tweet);
         	for(String content: contents) {
         		this.addHashtagFreq(content);
         	}
-        	contents = extractContents.extractAtMentions(nextRecord[5]);
+        	contents = extractContents.extractAtMentions(tweet);
         	for(String content: contents) {
         		this.addAtMentionFreq(content);
         	}
+        	tweet = extractContents.extractUsefulWords(tweet);
+        	tweets.add(tweet);
         }
         
         csvReader.close();
